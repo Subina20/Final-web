@@ -21,7 +21,7 @@ class ProductForm(forms.ModelForm):
         model=models.Product
         fields=['name','price','description','product_image']
 
-#address of shipment
+
 class AddressForm(forms.Form):
     Email = forms.EmailField()
     Mobile= forms.IntegerField()
@@ -32,13 +32,13 @@ class FeedbackForm(forms.ModelForm):
         model=models.Feedback
         fields=['name','feedback']
 
-#for updating status of order
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model=models.Orders
         fields=['status']
 
-#for contact us page
+
 class ContactusForm(forms.Form):
     Name = forms.CharField(max_length=30)
     Email = forms.EmailField()
